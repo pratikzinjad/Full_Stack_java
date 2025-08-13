@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java Basics Test | Practice Website</title>
+  <meta name="description" content="Practice-only Java basics test website for learning and self-assessment." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><text y=%2250%25%22 x=%2250%25%22 dy=%22.35em%22 text-anchor=%22middle%22 font-size=%2240%22>🧪</text></svg>">
+</head>
+<body>
+  <!-- Global Test Banner -->
+  <div class="test-banner" role="status" aria-live="polite">
+    🧪 This is a test website for practice and learning purposes only.
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="brand">
+        Java Basics Test
+        <span class="badge-test" title="Test/Practice Site">TEST</span>
+      </div>
+      <div class="controls">
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </nav>
+    <div id="progress-bar"><span id="progress-fill"></span></div>
+  </header>
+
+  <!-- Intro -->
+  <main class="container">
+    <section id="intro" class="card card-watermarked">
+      <div class="watermark" aria-hidden="true">TEST SITE</div>
+      <h1>Test Your Java Basics</h1>
+      <p>This practice-only site offers a short quiz to evaluate understanding of core Java concepts like syntax, OOP, data types, control flow, collections, and exceptions.</p>
+      <p class="disclaimer">
+        Note: Results are indicative for self-assessment and have no certification value. This is not an official examination.
+      </p>
+      <ul class="meta">
+        <li>10 questions</li>
+        <li>Time limit: 10 minutes</li>
+        <li>Instant explanations</li>
+      </ul>
+      <button id="start-btn" class="btn primary">Start Test</button>
+    </section>
+
+    <!-- Quiz Panel -->
+    <section id="quiz" class="card hidden">
+      <div class="quiz-top">
+        <div class="q-meta">
+          <span id="q-number">Question 1/10</span>
+          <span id="q-topic" class="chip">Topic</span>
+          <span class="chip chip-note" title="Practice mode only">Practice</span>
+        </div>
+        <div id="timer" class="timer">10:00</div>
+      </div>
+
+      <div id="q-text" class="q-text">Question text</div>
+
+      <form id="options" class="options">
+        <!-- Options injected by JS -->
+      </form>
+
+      <div id="explanation" class="explanation hidden">
+        <!-- Explanation injected by JS -->
+      </div>
+
+      <div class="quiz-actions">
+        <button id="prev-btn" class="btn" disabled>Previous</button>
+        <button id="next-btn" class="btn">Next</button>
+        <button id="submit-btn" class="btn success hidden">Submit</button>
+      </div>
+    </section>
+
+    <!-- Result Panel -->
+    <section id="result" class="card hidden">
+      <div class="result-header">
+        <h2>Your Result</h2>
+        <span class="badge-test" aria-label="Test Website">TEST</span>
+      </div>
+
+      <div class="score-wrap">
+        <div class="score-ring">
+          <svg viewBox="0 0 36 36" role="img" aria-label="Score ring">
+            <path class="bg" d="M18 2.0845
+                 a 15.9155 15.9155 0 0 1 0 31.831
+                 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <path id="score-path" class="progress" stroke-dasharray="0,100"
+              d="M18 2.0845
+                 a 15.9155 15.9155 0 0 1 0 31.831
+                 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <text x="18" y="20.35" class="percent" id="score-percent">0%</text>
+          </svg>
+        </div>
+        <div class="score-stats">
+          <p><strong id="score-raw">0/10 correct</strong></p>
+          <p id="score-band">Band: Beginner</p>
+          <p id="time-used">Time used: 0:00</p>
+        </div>
+      </div>
+
+      <div class="note-box">
+        🧪 This score is for practice only and does not represent an official assessment.
+      </div>
+
+      <h3>Topic Breakdown</h3>
+      <div id="breakdown" class="breakdown">
+        <!-- Topic stats injected by JS -->
+      </div>
+
+      <h3>Review Answers</h3>
+      <div id="review" class="review">
+        <!-- Review items injected by JS -->
+      </div>
+
+      <div class="result-actions">
+        <button id="retry-btn" class="btn">Retry</button>
+        <button id="export-btn" class="btn outline">Export Result</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast hidden">Saved!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
